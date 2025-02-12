@@ -5,87 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página con Bootstrap 5 y SASS</title>
     <link rel="stylesheet" href="/styles/bootstrap.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/custom.scss" />
+    <link rel="stylesheet" href="./styles/bootstrap.scss" />
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-          <a href="#">
-              <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Vimeo_logo.png" alt="">
-          </a>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item mx-2">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown mx-2">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown mx-2">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  EJEMPLO
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
+          <!-- Logo -->
+          <div class="mx-2">
+            <a href="#">
+              <img
+                id="logo"
+                src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Vimeo_logo.png"
+                alt=""
               />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+            </a>
+          </div>
+
+          <!-- Menú colapsable -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Menú izquierda -->
+            <div class="d-flex align-items-center">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item mx-1">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Producto<i class="bi bi-chevron-down mx-2"></i
+                  ></a>
+                </li>
+                <li class="nav-item mx-1">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Use Cases<i class="bi bi-chevron-down mx-2"></i
+                  ></a>
+                </li>
+                <li class="nav-item mx-1">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Soluciones<i class="bi bi-chevron-down mx-2"></i
+                  ></a>
+                </li>
+                <li class="nav-item mx-1">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Conocer<i class="bi bi-chevron-down mx-2"></i
+                  ></a>
+                </li>
+                <li class="nav-item mx-1">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Precio</a
+                  >
+                </li>
+                <li class="nav-item mx-1">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Ver</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Menú derecha -->
+            <div class="d-flex align-items-center ms-auto">
+              <ul class="navbar-nav d-flex align-items-center">
+                <li class="nav-item mx-1 d-flex align-items-center">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Comunicarse con Ventas</a
+                  >
+                </li>
+                <li class="nav-item mx-1 d-flex align-items-center">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Iniciar Sesion</a
+                  >
+                </li>
+                <li class="nav-item mx-1 d-flex align-items-center">
+                  <button class="btn btn-light p-3">
+                    Unirse
+                    <i
+                      class="bi bi-arrow-right bg-white rounded mx-1 px-3 py-2"
+                    ></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
     </header>
     <main>
-      <section class="mt-2">
-        <div class="container">
-          <h1>Haga más con sus videos</h1>
-          <p>
+      <section class="container mt-2">
+        <div class="text-center">
+          <h1 class="display-1 fw-bold">Haga más con sus videos</h1>
+          <p class="my-4">
             Conozca la plataforma de video completa que puede transformar su
             manera de hacer negocios.
           </p>
-          <button>Ver los planes</button>
-          <button>Unirse gratis</button>
+          <button class="btn btn-primary p-3">
+            Ver los planes
+            <i class="bi bi-arrow-right bg-primary rounded mx-1 px-3 py-2"></i>
+          </button>
+          <button class="btn btn-light p-3">
+            Unirse gratis
+            <i class="bi bi-arrow-right bg-light rounded mx-1 px-3 py-2"></i>
+          </button>
+        </div>
+        <!-- Contenedor para la imagen del portatil -->
+        <div class="mt-5 portatil">
+          <div class="videoPortatil">
+            <video autoplay loop muted playsinline>
+              <source
+                src="https://player.vimeo.com/progressive_redirect/playback/938226648/rendition/1080p/file.mp4?loc=external&signature=b1d907631c774c4dba6d9b4530f6db8ea5be4d9e5225df477b2b16dba0e080fb"
+                type="video/mp4"
+              />
+              Tu navegador no soporta el elemento de video.
+            </video>
+          </div>
         </div>
       </section>
     </main>
