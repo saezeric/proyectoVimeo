@@ -1,8 +1,5 @@
-// src/styles/bootstrap.scss
+// Sobrescribe variables de Bootstrap
+$primary: #17d5ff;
 
-// Importa Bootstrap desde node_modules
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
-
-// Sobrescribe variables de Bootstrap
-$primary: #5dc3dc;

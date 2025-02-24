@@ -1,7 +1,17 @@
 // src/styles/custom.scss
 
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
   font-family: "Lexend", serif;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 #logo {
@@ -38,4 +48,229 @@ body {
   height: 45%; /* Reducimos el alto del video */
   object-fit: cover; /* Ajusta el video al contenedor sin distorsión */
   transform: translateY(-25%); /* Movemos el video un poco hacia arriba */
+}
+
+// #################################################
+// #######                                   #######
+// #####    Botones animados para la pagina    #####
+// #######                                   #######
+// #################################################
+
+// Botones
+
+.btn:focus,
+.btn:active {
+  border: none;
+}
+
+.btn.button-primary {
+  position: relative;
+  background: linear-gradient(to right, #17d5ff 50%, #00aacf 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  border-radius: 15px;
+  transition: background-position 0.3s ease;
+}
+
+.button-primary:hover {
+  background-position: right bottom;
+}
+
+/* Estilos para el botón con efecto slide */
+.btn.button-secondary {
+  position: relative;
+  background: linear-gradient(to right, #dfe4ea 50%, #17d5ff 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  border-radius: 15px;
+  transition: background-position 0.3s ease;
+}
+
+.btn.button-secondary:hover {
+  background-position: right bottom;
+}
+
+// Colores de los botones
+
+.fondo-flecha-primary {
+  background-color: #00aacf;
+  border-radius: 5px;
+  margin-left: 10px;
+  overflow: hidden; // Oculta lo que sobresalga
+  display: inline-flex; // Alinea los iconos en fila
+  align-items: center;
+  transition: background-color 0.5s ease;
+}
+
+.btn.button-primary:hover .fondo-flecha-primary {
+  background-color: #17d5ff;
+}
+
+.fondo-flecha-secondary {
+  background-color: #fafcfd;
+  border-radius: 5px;
+  margin-left: 10px;
+  overflow: hidden; // Oculta lo que sobresalga
+  display: inline-flex; // Alinea los iconos en fila
+  align-items: center;
+  transition: background-color 0.5s ease;
+}
+
+.btn.button-secondary:hover .fondo-flecha-secondary {
+  background-color: #00aacf;
+}
+
+.fondo-flecha-nav {
+  background-color: #17d5ff;
+  border-radius: 5px;
+  margin-left: 10px;
+  overflow: hidden; // Oculta lo que sobresalga
+  display: inline-flex; // Alinea los iconos en línea
+  align-items: center;
+  transition: background-color 0.5s ease;
+}
+
+.btn.button-secondary:hover .fondo-flecha-nav {
+  background-color: #00aacf;
+}
+
+// Flechas para los botones
+
+.flecha {
+  transform: translateX(-16px); // Posición inicial oculta hacia la izquierda
+  transition: transform 0.4s ease; // Transición para el movimiento
+}
+
+.flecha-oculta {
+  margin-right: 15px;
+}
+
+.btn.button-primary:hover .flecha {
+  transform: translateX(
+    16px
+  ); // En hover, la flecha se mueve a su posición normal
+}
+
+.btn.button-secondary:hover .flecha {
+  transform: translateX(
+    16px
+  ); // En hover, la flecha se mueve a su posición normal
+}
+
+.btn.button-secondary:hover .flecha {
+  transform: translateX(
+    16px
+  ); // En hover, la flecha se mueve a su posición normal
+}
+
+// #################################################
+// #######                                   #######
+// #####  Section Solicitar una Demostracion   #####
+// #######                                   #######
+// #################################################
+
+.bg-overlay {
+  background-image: url(https://i.vimeocdn.com/custom_asset/8b5bc41926561c9ac287a727ade1f786?w=1920&q=80);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.paquete-h2 {
+  font-size: 3vh;
+}
+
+.paquete-text {
+  font-size: 22px;
+}
+
+// #################################################
+// #######                                   #######
+// #####    Section de slider con imagenes     #####
+// #######                                   #######
+// #################################################
+
+.div-titulo-slider h2 {
+  font-size: 1.8vh;
+}
+
+.imagen-carrusel1 {
+  overflow: hidden; // Ocultamos cualquier contenido que salga de nuestro carrusel
+  position: relative; // Posicionamos el carrusel para indicar donde posicionamos nuestras imagenes del carrusel a continuación
+}
+
+.carrusel-wrapper {
+  overflow: hidden; // Volvemos a ocultar todo aquello que salga fuera de nuestro area visible
+  width: 100%; // Ajustamos un ancho de 100% para nuestro carrusel
+}
+
+.carrusel-movimiento {
+  display: flex; // Movemos todas las imagenes en una misma fila;
+  width: calc(
+    2 * 100%
+  ); // Ajustamos el ancho de nuestro carrusel al doble de lo que nuestro carrusel será visible, ya que tenemos el doble de fotos
+  animation: slide 40s linear infinite; // Añadimos la animacion de movimiento por unos 20s, fija en el mismo lugar y que será infinita siempre
+}
+
+.carrusel-movimiento img {
+  flex: 0 0 10%; // Evitamos que las imagenes se encojan o se expandan, ademas le indicamos la cantidad del ancho que queremos que ocupe cada imagen, en este caso un 13%
+  width: 5vh; // Ajustamos el ancho de nuestras imagenes
+  height: 5vh; // Ajustamos la altura de nuestras imagenes
+  object-fit: contain; // Ajustamos la imagen al tamaño que queremos que se vea evitando la distorsión
+  margin-right: 20px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(
+      0
+    ); // Punto inicial donde se veran las primeras imagenes
+  }
+  100% {
+    transform: translateX(
+      -50%
+    ); // Punto final donde se veran las ultimas imagenes
+  }
+}
+
+.fade-left {
+  position: absolute; // Posiciona este div de forma absoluta respecto al contenedor con posición relativa
+  top: 0; // Lo colocamos en el tope superior del contenedor
+  left: 0; // Lo ubicamos en el borde izquierdo del contenedor
+  width: 100px; // Define el ancho del fade para el lado izquierdo
+  height: 100%; // Hace que la altura del div sea la misma que la del contenedor
+  background: linear-gradient(
+    to right,
+    #f8f9fa,
+    transparent
+  ); // Crea un degradado que va desde el color de fondo a transparente de izquierda a derecha
+  pointer-events: none; // Nos permite hacer clic a través del div, sin interferir en la interactividad del usuario
+}
+
+.fade-right {
+  position: absolute; // Posiciona este div de forma absoluta respecto al contenedor posición relativa
+  top: 0; // Lo coloca en el tope del contenedor
+  right: 0; // Lo sitúa en el borde derecho del contenedor
+  width: 100px; // Define el ancho del fade para el lado derecho
+  height: 100%; // Hace que la altura del div sea la misma que la del contenedor
+  background: linear-gradient(
+    to left,
+    #f8f9fa,
+    transparent
+  ); // Crea un degradado que va desde el color de fondo a transparente, pero en dirección de derecha a izquierda
+  pointer-events: none; // Nos permite hacer clic a través del div, sin interferir en la interactividad del usuario
+}
+
+.texto-carrusel {
+  font-size: 22px;
+}
+
+// ######################################################
+// #######                                       ########
+// #####    Section divs con imagenes y botones     #####
+// #######                                       ########
+// ######################################################
+
+.plataforma-video h2 {
+  font-size: 4.5vh;
 }

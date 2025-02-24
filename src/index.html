@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página con Bootstrap 5 y SASS</title>
+    <title>Vimeo Saez Eric</title>
     <link rel="stylesheet" href="/styles/bootstrap.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,18 +17,51 @@
     <link rel="stylesheet" href="./styles/bootstrap.scss" />
   </head>
   <body>
+    <!-- ###### -->
+    <!-- header -->
+    <!-- ###### -->
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
           <!-- Logo -->
-          <div class="mx-2">
-            <a href="#">
-              <img
-                id="logo"
-                src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Vimeo_logo.png"
-                alt=""
-              />
-            </a>
+          <div class="mx-2 d-flex justify-content-between align-items-center">
+            <div class="">
+              <a href="#">
+                <img
+                  id="logo"
+                  src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Vimeo_logo.png"
+                  alt=""
+                />
+              </a>
+            </div>
+
+            <!-- Menú derecha -->
+            <div class="d-flex align-items-center ms-auto d-lg-none">
+              <ul class="navbar-nav d-flex align-items-center">
+                <li class="nav-item mx-1 d-flex align-items-center">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Iniciar Sesion</a
+                  >
+                </li>
+                <li class="nav-item mx-1 d-flex align-items-center">
+                  <button class="btn button-secondary px-3 py-3">
+                    <div class="d-flex align-items-center">Unirse</div>
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Navbar toggler o Boton menu para movil -->
+            <span
+              class="navbar-toggler-icon d-lg-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+            </span>
           </div>
 
           <!-- Menú colapsable -->
@@ -39,11 +72,6 @@
                 <li class="nav-item mx-1">
                   <a class="nav-link active" aria-current="page" href="#"
                     >Producto<i class="bi bi-chevron-down mx-2"></i
-                  ></a>
-                </li>
-                <li class="nav-item mx-1">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Use Cases<i class="bi bi-chevron-down mx-2"></i
                   ></a>
                 </li>
                 <li class="nav-item mx-1">
@@ -83,11 +111,14 @@
                   >
                 </li>
                 <li class="nav-item mx-1 d-flex align-items-center">
-                  <button class="btn btn-light p-3">
-                    Unirse
-                    <i
-                      class="bi bi-arrow-right bg-white rounded mx-1 px-3 py-2"
-                    ></i>
+                  <button class="btn button-secondary px-3 py-3">
+                    <div class="d-flex align-items-center">
+                      Unirse
+                      <div class="fondo-flecha-nav">
+                        <i class="bi bi-arrow-right flecha flecha-oculta"></i>
+                        <i class="bi bi-arrow-right flecha"></i>
+                      </div>
+                    </div>
                   </button>
                 </li>
               </ul>
@@ -96,7 +127,14 @@
         </div>
       </nav>
     </header>
+
+    <!-- #### -->
+    <!-- main -->
+    <!-- #### -->
     <main>
+      <!-- ############# -->
+      <!-- Inicio pagina -->
+      <!-- ############# -->
       <section class="container mt-2">
         <div class="text-center">
           <h1 class="display-1 fw-bold">Haga más con sus videos</h1>
@@ -104,13 +142,23 @@
             Conozca la plataforma de video completa que puede transformar su
             manera de hacer negocios.
           </p>
-          <button class="btn btn-primary p-3">
-            Ver los planes
-            <i class="bi bi-arrow-right bg-primary rounded mx-1 px-3 py-2"></i>
+          <button class="btn button-primary px-4 py-3">
+            <div class="d-flex align-items-center">
+              Ver los planes
+              <div class="fondo-flecha-primary">
+                <i class="bi bi-arrow-right flecha flecha-oculta"></i>
+                <i class="bi bi-arrow-right flecha"></i>
+              </div>
+            </div>
           </button>
-          <button class="btn btn-light p-3">
-            Unirse gratis
-            <i class="bi bi-arrow-right bg-light rounded mx-1 px-3 py-2"></i>
+          <button class="btn button-secondary px-4 py-3">
+            <div class="d-flex align-items-center">
+              Unirse gratis
+              <div class="fondo-flecha-secondary">
+                <i class="bi bi-arrow-right flecha flecha-oculta"></i>
+                <i class="bi bi-arrow-right flecha"></i>
+              </div>
+            </div>
           </button>
         </div>
         <!-- Contenedor para la imagen del portatil -->
@@ -123,6 +171,119 @@
               />
               Tu navegador no soporta el elemento de video.
             </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- ################ -->
+      <!-- Imagen con boton -->
+      <!-- ################ -->
+      <section class="container-fluid bg-overlay py-5 mt-5">
+        <div class="container container-paquete">
+          <h2 class="paquete-h2 text-white">
+            Su paquete completo de herramientas de video
+          </h2>
+          <div class="mt-4 paquete-text text-white">
+            Obtenga todo lo que necesita para editar, gestionar y publicar vdeos
+            impactantes que generen resultados.
+          </div>
+          <button class="btn button-primary px-4 py-3 mt-4">
+            <div class="d-flex align-items-center">
+              Solicitar una demostración
+              <div class="fondo-flecha-primary">
+                <i class="bi bi-arrow-right flecha flecha-oculta"></i>
+                <i class="bi bi-arrow-right flecha"></i>
+              </div>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <!-- #################### -->
+      <!-- Carrusel de imagenes -->
+      <!-- #################### -->
+      <section class="container-fluid bg-body-tertiary py-5">
+        <div class="container text-center d-flex justify-content-center">
+          <div class="div-titulo-slider mb-3">
+            <h2>
+              La plataforma de confianza de 287 millones de creadores,
+              empresarios y negocios
+            </h2>
+          </div>
+        </div>
+        <div class="container imagen-carrusel1 mt-2">
+          <div class="carrusel-wrapper">
+            <div class="carrusel-movimiento">
+              <!-- Realizamos grupos de imagenes para nunca quedarnos sin imagenes dentro del carrusel -->
+              <!-- Grupo de imagenes 1 -->
+              <img
+                src="https://i.vimeocdn.com/custom_asset/bf59fc6600263f12fa9bee6cb6b0081d"
+                alt="WarnerBros"
+              />
+              <img
+                src="https://i.vimeocdn.com/custom_asset/d54486aaccee4970f30eb0410ad80dcf"
+                alt="Santander"
+              />
+              <img
+                src="https://i.vimeocdn.com/custom_asset/481f17beba6d49994da581c14928d839"
+                alt="Zendesk"
+              />
+              <img
+                src="https://i.vimeocdn.com/custom_asset/05408319d910ddba0c55440607e76d86"
+                alt="Rite_Aid"
+              />
+              <img
+                src="https://i.vimeocdn.com/custom_asset/790a2c71fc0084c6b0623fe9aa37f2d1"
+                alt="Deloitte"
+              />
+
+              <!-- Grupo de imagenes 2 -->
+              <img
+                src="https://i.vimeocdn.com/custom_asset/bf59fc6600263f12fa9bee6cb6b0081d"
+                alt="WarnerBros"
+              />
+              <img
+                src="https://i.vimeocdn.com/custom_asset/d54486aaccee4970f30eb0410ad80dcf"
+                alt="Santander"
+              />
+              <img
+                src="https://i.vimeocdn.com/custom_asset/481f17beba6d49994da581c14928d839"
+                alt="Zendesk"
+              />
+              <img
+                src="https://i.vimeocdn.com/custom_asset/05408319d910ddba0c55440607e76d86"
+                alt="Rite_Aid"
+              />
+              <img
+                src="https://i.vimeocdn.com/custom_asset/790a2c71fc0084c6b0623fe9aa37f2d1"
+                alt="Deloitte"
+              />
+            </div>
+            <!-- Div para el efecto de desvanecimiento a la izquierda -->
+            <div class="fade-left"></div>
+            <!-- Div para el efecto de desvanecimiento a la derecha -->
+            <div class="fade-right"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Su plataforma de video -->
+      <section class="container-fluid">
+        <div class="container">
+          <div class="d-flex justify-content-center">
+            <div class="div-titulo-slider text-center mt-5">
+              <p class="texto-carrusel">
+                Las mejores experiencias de video en Internet, en un mismo lugar
+              </p>
+            </div>
+          </div>
+          <div class="text-center plataforma-video">
+            <h2>Su plataforma de video impulsada por IA</h2>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
       </section>
