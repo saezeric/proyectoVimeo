@@ -213,9 +213,9 @@ a {
 }
 
 .carrusel-movimiento img {
-  flex: 0 0 10%; // Evitamos que las imagenes se encojan o se expandan, ademas le indicamos la cantidad del ancho que queremos que ocupe cada imagen, en este caso un 13%
-  width: 5vh; // Ajustamos el ancho de nuestras imagenes
-  height: 5vh; // Ajustamos la altura de nuestras imagenes
+  flex: 0 0 14%; // Evitamos que las imagenes se encojan o se expandan, ademas le indicamos la cantidad del ancho que queremos que ocupe cada imagen, en este caso un 13%
+  width: 8vh; // Ajustamos el ancho de nuestras imagenes
+  height: 8vh; // Ajustamos la altura de nuestras imagenes
   object-fit: contain; // Ajustamos la imagen al tamaño que queremos que se vea evitando la distorsión
   margin-right: 20px;
 }
