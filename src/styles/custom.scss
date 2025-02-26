@@ -102,8 +102,22 @@ a {
   transition: background-color 0.5s ease;
 }
 
-.btn.button-primary:hover .fondo-flecha-primary {
+.btn.btn.button-primary:hover .fondo-flecha-primary {
   background-color: #17d5ff;
+}
+
+.fondo-flecha-primary2 {
+  background-color: #17d5ff;
+  border-radius: 7px;
+  margin-left: 10px;
+  overflow: hidden; // Oculta lo que sobresalga
+  display: inline-flex; // Alinea los iconos en fila
+  align-items: center;
+  transition: background-color 0.5s ease;
+}
+
+.btn.fondo-flecha-primary2:hover {
+  background-color: #00aacf;
 }
 
 .fondo-flecha-secondary {
@@ -151,6 +165,23 @@ a {
   ); // En hover, la flecha se mueve a su posición normal
 }
 
+// Tenemos 2 flechas ya que hay 2 botones diferentes
+
+.flecha2 {
+  transform: translateX(-30px); // Posición inicial oculta hacia la izquierda
+  transition: transform 0.4s ease; // Transición para el movimiento
+}
+
+.flecha-oculta2 {
+  margin-right: 35px;
+}
+
+.btn:hover .flecha2 {
+  transform: translateX(
+    30px
+  ); // En hover, la flecha se mueve a su posición normal
+}
+
 .btn.button-secondary:hover .flecha {
   transform: translateX(
     16px
@@ -191,7 +222,7 @@ a {
 // #################################################
 
 .div-titulo-slider h2 {
-  font-size: 1.8vh;
+  font-size: 28px;
 }
 
 .imagen-carrusel1 {
@@ -209,11 +240,11 @@ a {
   width: calc(
     2 * 100%
   ); // Ajustamos el ancho de nuestro carrusel al doble de lo que nuestro carrusel será visible, ya que tenemos el doble de fotos
-  animation: slide 40s linear infinite; // Añadimos la animacion de movimiento por unos 20s, fija en el mismo lugar y que será infinita siempre
+  animation: slide 50s linear infinite; // Añadimos la animacion de movimiento por unos 20s, fija en el mismo lugar y que será infinita siempre
 }
 
 .carrusel-movimiento img {
-  flex: 0 0 14%; // Evitamos que las imagenes se encojan o se expandan, ademas le indicamos la cantidad del ancho que queremos que ocupe cada imagen, en este caso un 13%
+  flex: 0 0 13%; // Evitamos que las imagenes se encojan o se expandan, ademas le indicamos la cantidad del ancho que queremos que ocupe cada imagen, en este caso un 13%
   width: 8vh; // Ajustamos el ancho de nuestras imagenes
   height: 8vh; // Ajustamos la altura de nuestras imagenes
   object-fit: contain; // Ajustamos la imagen al tamaño que queremos que se vea evitando la distorsión
@@ -273,4 +304,8 @@ a {
 
 .plataforma-video h2 {
   font-size: 4.5vh;
+}
+
+.rounded-custom {
+  border-radius: 25px;
 }
