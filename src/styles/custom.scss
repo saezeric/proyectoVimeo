@@ -102,7 +102,7 @@ a {
   transition: background-color 0.5s ease;
 }
 
-.btn.btn.button-primary:hover .fondo-flecha-primary {
+.btn.button-primary:hover .fondo-flecha-primary {
   background-color: #17d5ff;
 }
 
@@ -116,7 +116,7 @@ a {
   transition: background-color 0.5s ease;
 }
 
-.btn.fondo-flecha-primary2:hover {
+.hover-div:hover .btn.fondo-flecha-primary2 {
   background-color: #00aacf;
 }
 
@@ -176,7 +176,7 @@ a {
   margin-right: 35px;
 }
 
-.btn:hover .flecha2 {
+.hover-div:hover .flecha2 {
   transform: translateX(
     30px
   ); // En hover, la flecha se mueve a su posición normal
