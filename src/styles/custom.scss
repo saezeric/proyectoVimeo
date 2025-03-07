@@ -208,7 +208,7 @@ a {
 }
 
 .paquete-h2 {
-  font-size: 5vh;
+  font-size: 48px;
   width: 1200px;
 }
 
@@ -227,7 +227,11 @@ a {
 }
 
 .div-titulo-slider h2 {
-  font-size: 3vh;
+  font-size: 45px;
+}
+
+.div-titulo-slider p {
+  font-size: 22px;
 }
 
 .imagen-carrusel1 {
@@ -250,8 +254,8 @@ a {
 
 .carrusel-movimiento img {
   flex: 0 0 13%; // Evitamos que las imagenes se encojan o se expandan, ademas le indicamos la cantidad del ancho que queremos que ocupe cada imagen, en este caso un 13%
-  width: 9vh; // Ajustamos el ancho de nuestras imagenes
-  height: 9vh; // Ajustamos la altura de nuestras imagenes
+  width: 70px; // Ajustamos el ancho de nuestras imagenes
+  height: 80px; // Ajustamos la altura de nuestras imagenes
   object-fit: contain; // Ajustamos la imagen al tamaño que queremos que se vea evitando la distorsión
   margin-right: 20px;
 }
@@ -320,7 +324,7 @@ h3 {
 }
 
 .plataforma-video h2 {
-  font-size: 7vh;
+  font-size: 60px;
 }
 
 .plataforma-video {
@@ -332,7 +336,7 @@ h3 {
 }
 
 .font-size-herramientas {
-  font-size: 1.9vh;
+  font-size: 18px;
 }
 
 .tamaño-cards {
@@ -344,7 +348,7 @@ h3 {
 }
 
 .vimeo-clientes h2 {
-  font-size: 4.5vh;
+  font-size: 55px;
 }
 
 // ######################################################
@@ -354,18 +358,76 @@ h3 {
 // ######################################################
 
 .hover-div-2 img {
-  height: 50vh;
+  height: 500px;
   object-fit: cover;
 }
 
+/* Aplica a cada card (div) para que se comporten como items flexibles */
 .hover-div-2 {
-  width: 400px;
-  transition: width 0.3s ease;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 10px;
+  flex: 1; // Cada card ocupa inicialmente el mismo espacio dentro del contenedor flex
+  transition: flex 0.3s ease; // Transición suave al cambiar el espacio que ocupa cada card
+  margin-left: 10px; // Espacio entre las cards
 }
 
+/* Al hacer hover sobre una card, esta se expande */
 .hover-div-2:hover {
-  width: 800px;
+  flex: 3; // La card en hover ocupará más espacio, mientras que las demás se contraen automáticamente
+}
+
+// ######################################################
+// #######                                       ########
+// #####        Agilice el flujo de trabajo         #####
+// #######                                       ########
+// ######################################################
+
+.carrusel-movimiento2 {
+  display: flex; // Movemos todas las imagenes en una misma fila;
+  width: calc(
+    2 * 100%
+  ); // Ajustamos el ancho de nuestro carrusel al doble de lo que nuestro carrusel será visible, ya que tenemos el doble de fotos
+  animation: slide 50s linear infinite; // Añadimos la animacion de movimiento por unos 20s, fija en el mismo lugar y que será infinita siempre
+}
+
+.carrusel-movimiento2 img {
+  background-color: #1c1c1e;
+  flex: 0 0 10%; // Evitamos que las imagenes se encojan o se expandan, ademas le indicamos la cantidad del ancho que queremos que ocupe cada imagen, en este caso un 13%
+  height: 190px; // Ajustamos la altura de nuestras imagenes
+  width: 170px;
+  padding: 50px;
+  border-radius: 20px;
+  object-fit: contain; // Ajustamos la imagen al tamaño que queremos que se vea evitando la distorsión
+  margin-right: 20px;
+}
+
+.btn.button-alternative {
+  position: relative;
+  background: linear-gradient(to right, #e1e1e2 50%, #17d5ff 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  border-radius: 15px;
+  transition: background-position 0.3s ease;
+}
+
+.button-alternative:hover {
+  background-position: right bottom;
+}
+
+.fondo-flecha-alternative {
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-left: 10px;
+  overflow: hidden; // Oculta lo que sobresalga
+  display: inline-flex; // Alinea los iconos en fila
+  align-items: center;
+  transition: background-color 0.5s ease;
+}
+
+.btn.button-alternative:hover .fondo-flecha-alternative {
+  background-color: #00aacf;
+}
+
+.btn.button-alternative:hover .flecha {
+  transform: translateX(
+    16px
+  ); // En hover, la flecha se mueve a su posición normal
 }
