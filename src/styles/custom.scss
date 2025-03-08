@@ -464,3 +464,11 @@ h3 {
     16px
   ); // En hover, la flecha se mueve a su posición normal
 }
+
+.texto-links a {
+  color: white;
+}
+
+.texto-links a:hover {
+  color: rgb(0, 225, 255);
+}
