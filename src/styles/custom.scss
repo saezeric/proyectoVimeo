@@ -207,15 +207,6 @@ a {
   z-index: -1;
 }
 
-.paquete-h2 {
-  font-size: 48px;
-  width: 1200px;
-}
-
-.paquete-text {
-  font-size: 22px;
-}
-
 // #################################################
 // #######                                   #######
 // #####    Section de slider con imagenes     #####
@@ -224,14 +215,6 @@ a {
 
 .div-titulo-slider {
   width: 700px;
-}
-
-.div-titulo-slider h2 {
-  font-size: 45px;
-}
-
-.div-titulo-slider p {
-  font-size: 22px;
 }
 
 .imagen-carrusel1 {
@@ -427,6 +410,56 @@ h3 {
 }
 
 .btn.button-alternative:hover .flecha {
+  transform: translateX(
+    16px
+  ); // En hover, la flecha se mueve a su posición normal
+}
+
+.image-size img {
+  height: 175px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+// ######################################################
+// #######                                       ########
+// #####                  Footer                    #####
+// #######                                       ########
+// ######################################################
+
+.flecha-black {
+  color: black;
+}
+
+.btn.button-alternative2 {
+  position: relative;
+  background: linear-gradient(to right, rgb(71, 71, 71) 50%, #17d5ff 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  border-radius: 15px;
+  transition: background-position 0.3s ease;
+}
+
+.button-alternative2:hover {
+  background-position: right bottom;
+}
+
+.fondo-flecha-alternative2 {
+  background-color: #0f0f0f;
+  border-radius: 5px;
+  margin-left: 10px;
+  overflow: hidden; // Oculta lo que sobresalga
+  display: inline-flex; // Alinea los iconos en fila
+  align-items: center;
+  transition: background-color 0.5s ease;
+}
+
+.btn.button-alternative2:hover .fondo-flecha-alternative2 {
+  background-color: #00aacf;
+}
+
+.btn.button-alternative2:hover .flecha {
   transform: translateX(
     16px
   ); // En hover, la flecha se mueve a su posición normal
