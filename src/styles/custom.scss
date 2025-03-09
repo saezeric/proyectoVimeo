@@ -50,14 +50,6 @@ body {
   position: relative; /* Para evitar que el dropdown esté limitado por el li */
 }
 
-/* 🔹 Permite que el menú desplegable se posicione fuera del <li> */
-.nav-item.dropdown .dropdown-menu {
-  position: absolute;
-  left: 0; /* Mantiene el menú alineado con el enlace "Conocer" */
-  top: 100%; /* Lo coloca justo debajo del enlace */
-  z-index: 1000; /* Asegura que el menú aparezca sobre otros elementos */
-}
-
 /* 🔹 Agregar margen y padding para evitar que el menú esté pegado al borde */
 .borde-menu-dropdown {
   padding: 15px;
