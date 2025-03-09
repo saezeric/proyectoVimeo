@@ -10,6 +10,12 @@ body {
   text-decoration: none;
 }
 
+.navbar.bg-transparent.fixed-top.scrolled {
+  background-color: rgba(136, 136, 136, 0.8);
+  backdrop-filter: blur(200px);
+  transition: background-color 0.3s ease;
+}
+
 a {
   text-decoration: none;
 }
@@ -427,6 +433,10 @@ h3 {
 // #####                  Footer                    #####
 // #######                                       ########
 // ######################################################
+
+footer section {
+  background-color: #0a0e12;
+}
 
 .flecha-black {
   color: black;
