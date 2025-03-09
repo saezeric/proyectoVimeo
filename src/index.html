@@ -21,47 +21,302 @@
     <!-- header -->
     <!-- ###### -->
     <header>
-      <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
+      <nav class="navbar navbar-expand-lg d-none d-xl-block bg-transparent fixed-top scrolled">
+          <div class="container">
+          <!-- Logo -->
+          <div class="mx-2 d-flex justify-content-between align-items-center">
+        <div>
+          <a href="#">
+                <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Vimeo_logo.png" alt="Vimeo" />
+              </a>
+            </div>
+      
+            <!-- Menú derecha para dispositivos pequeños -->
+            <div class="d-flex align-items-center ms-auto d-lg-none">
+              <ul class="navbar-nav d-flex align-items-center">
+                <li class="nav-item mx-1 d-flex align-items-center">
+                  <a class="nav-link active" href="#">Iniciar Sesión</a>
+                </li>
+                <li class="nav-item mx-1 d-flex align-items-center">
+                  <button class="btn button-secondary px-3 py-3">
+                    <div class="d-flex align-items-center">Unirse</div>
+                  </button>
+                </li>
+              </ul>
+            </div>
+      
+            <!-- Botón de menú para móviles -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+      
+          <!-- Menú colapsable -->
+          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+          <!-- Menú izquierda -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- Dropdown de Productos -->
+            <li class="nav-item dropdown mx-1">
+              <a class="nav-link dropdown-toggle text-dark" href="#" id="productosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Producto
+              </a>
+                <div class="dropdown-menu container-fluid bg-transparent border-0 m-0 p-0" aria-labelledby="productosDropdown">
+                  <div class="container bg-white borde-menu-dropdown">
+                    <div class="row px-5">
+                      <div class="col-12 col-lg-3 py-5 ps-4 div-hover-nav">
+                        <div class="d-flex flex-column justify-content-between h-100">
+                          <div>
+                            <h3 class="fs-4">Alojamiento y reproductor</h3>
+                            <div class="d-flex flex-column texto-links-negro py-2">
+                              <a class="mb-2" href="#"><i class="bi bi-play-circle text-dark me-1"></i> Reproductor de video</a>
+                              <a class="mb-2" href="#"><i class="bi bi-cloud-upload text-dark me-1"></i> Alojamiento de videos</a>
+                            </div>
+                          </div>
+                          <div class="mt-5">
+                            <h3 class="fs-4">Gestión de video</h3>
+                            <div class="d-flex flex-column texto-links-negro py-2">
+                              <a class="mb-2" href="#"><i class="bi bi-collection-play text-dark me-1"></i> Videoteca</a>
+                              <a class="mb-2" href="#"><i class="bi bi-people text-dark me-1"></i> Colaboración</a>
+                              <a class="mb-2" href="#"><i class="bi bi-shield-lock text-dark me-1"></i> Seguridad</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-3 py-5 ps-4 div-hover-nav">
+                        <div class="d-flex flex-column justify-content-between h-100">
+                          <div>
+                            <h3 class="fs-4">Creación y edición</h3>
+                            <div class="d-flex flex-column texto-links-negro py-2">
+                              <a class="mb-2" href="#"><i class="bi bi-camera-video text-dark me-1"></i> Grabar</a>
+                              <a class="mb-2" href="#"><i class="bi bi-scissors text-dark me-1"></i> Editor de videos</a>
+                              <a class="mb-2" href="#"><i class="bi bi-camera-reels text-dark me-1"></i> Realizador de videos</a>
+                            </div>
+                          </div>
+                          <div>
+                            <h3 class="fs-4 mt-5">Eventos</h3>
+                            <div class="d-flex flex-column texto-links-negro py-2">
+                              <a class="mb-2" href="#"><i class="bi bi-broadcast text-dark me-1"></i> Transmisión en vivo</a>
+                              <a class="mb-2" href="#"><i class="bi bi-building text-dark me-1"></i> Vimeo Venues</a>
+                              <a class="mb-2" href="#"><i class="bi bi-camera-video text-dark me-1"></i> Seminarios web</a>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                        <div class="col-12 col-lg-3 py-5 ps-4 div-hover-nav">
+                          <div class="d-flex flex-column justify-content-between h-100">
+                          <div>
+                            <h3 class="fs-4">Plataforma</h3>
+                            <div class="d-flex flex-column texto-links-negro py-2">
+                            <a class="mb-2" href="#"><i class="bi bi-robot text-dark me-1"></i> Vimeo AI</a>
+                            <a class="mb-2" href="#"><i class="bi bi-bar-chart text-dark me-1"></i> Análisis</a>
+                            <a class="mb-2" href="#"><i class="bi bi-phone text-dark me-1"></i> Móvil</a>
+                            <a class="mb-2" href="#"><i class="bi bi-puzzle text-dark me-1"></i> Centro de integraciones</a>
+                            </div>
+                          </div>
+                          <div>
+                            <h3 class="fs-4 mt-5">Monetización de videos</h3>
+                            <div class="d-flex flex-column texto-links-negro py-2">
+                            <a class="mb-2" href="#"><i class="bi bi-tv text-dark me-1"></i> OTT</a>
+                            <a class="mb-2" href="#"><i class="bi bi-film text-dark me-1"></i> Video on demand</a>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      <div class="col-12 col-lg-3 py-5 ps-4 div-hover-nav">
+                        <h3 class="fs-4">Nuevos lanzamientos</h3>
+                        <div class="d-flex flex-column texto-links-negro mt-3">
+                          <a class="mb-2" href="#"><i class="bi bi-star-fill text-dark me-1"></i> Lanzamiento de otoño de 2024</a>
+                          <a class="mb-2" href="#"><i class="bi bi-star-fill text-dark me-1"></i> Lanzamiento del T3 2024</a>
+                          <a class="mb-2" href="#"><i class="bi bi-star-fill text-dark me-1"></i> Lanzamientos del T2 2024</a>
+                          <a class="mb-2" href="#"><i class="bi bi-star-fill text-dark me-1"></i> Lanzamientos del T1 2024</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+      
+              <!-- Dropdown de Soluciones -->
+              <li class="nav-item dropdown mx-1">
+              <a class="nav-link dropdown-toggle text-dark" href="#" id="solucionesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Soluciones
+              </a>
+                <div class="dropdown-menu container-fluid bg-transparent border-0 m-0 p-0" aria-labelledby="solucionesDropdown">
+                  <div class="container bg-white borde-menu-dropdown">
+                    <div class="row px-5">
+                      <div class="col-12 col-lg-4 py-5 ps-4 div-hover-nav2">
+                        <div class="d-flex flex-column justify-content-between h-100">
+                          <div>
+                            <h3 class="fs-4">Vimeo para</h3>
+                            <div class="d-flex flex-column texto-links-negro py-2">
+                                <a class="mb-2" href="#"><i class="bi bi-play-circle text-dark me-1"></i> Reproductor de video</a>
+                                <a class="mb-2" href="#"><i class="bi bi-cloud-upload text-dark me-1"></i> Alojamiento de videos</a>
+                                <a class="mb-2" href="#"><i class="bi bi-building text-dark me-1"></i> Empresas</a>
+                                <a class="mb-2" href="#"><i class="bi bi-briefcase text-dark me-1"></i> Pequeñas empresas</a>
+                                <a class="mb-2" href="#"><i class="bi bi-palette text-dark me-1"></i> Profesionales creativos</a>
+                                <a class="mb-2" href="#"><i class="bi bi-currency-dollar text-dark me-1"></i> Monetización de videos</a>
+                                <a class="mb-2" href="#"><i class="bi bi-book text-dark me-1"></i> Educadores</a>
+                                <a class="mb-2" href="#"><i class="bi bi-megaphone text-dark me-1"></i> Profesionales del marketing</a>
+                                <a class="mb-2" href="#"><i class="bi bi-chat-dots text-dark me-1"></i> Comunicaciones corporativas</a>
+                                <a class="mb-2" href="#"><i class="bi bi-mortarboard text-dark me-1"></i> Aprendizaje y desarrollo</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-4 py-5 ps-4 div-hover-nav2">
+                        <div class="d-flex flex-column justify-content-between h-100">
+                          <div>
+                            <h3 class="fs-4">Soluciones</h3>
+                            <div class="d-flex flex-column texto-links-negro py-2">
+                              <a class="mb-2" href="#"><i class="bi bi-building text-dark me-1"></i> Vimeo Central</a>
+                              <a class="mb-2" href="#"><i class="bi bi-megaphone text-dark me-1"></i> Vimeo Marketing</a>
+                              <a class="mb-2" href="#"><i class="bi bi-tv text-dark me-1"></i> Vimeo OTT</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-4 py-5 ps-4 div-hover-nav2">
+                        <div class="image-size">
+                          <img src="https://i.vimeocdn.com/custom_asset/8707303f0fd53c3e8e773a1576847bb1?w=288&q=80" alt="">
+                        </div>
+                        <h3 class="fs-4 mt-3">Nuevos lanzamientos</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+      
+              <!-- Dropdown de Conocer -->
+              <li class="nav-item dropdown mx-1">
+              <a class="nav-link dropdown-toggle text-dark" href="#" id="conocerDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Conocer
+              </a>
+                <div class="dropdown-menu container-fluid bg-transparent border-0 m-0 p-0" aria-labelledby="conocerDropdown">
+                  <div class="container bg-white borde-menu-dropdown">
+                    <div class="row px-5">
+                      <div class="col-12 col-lg-4 py-5 ps-4 div-hover-nav2">
+                        <div class="d-flex flex-column justify-content-between h-100">
+                          <div>
+                            <h3 class="fs-4">Resources</h3>
+                            <div class="d-flex flex-column texto-links-negro py-2">
+                                <a class="mb-2" href="#"><i class="bi bi-person-lines-fill text-dark me-1"></i> Historias de los clientes</a>
+                                <a class="mb-2" href="#"><i class="bi bi-journal-text text-dark me-1"></i> Blog</a>
+                                <a class="mb-2" href="#"><i class="bi bi-calendar-event text-dark me-1"></i> Eventos y seminarios web</a>
+                                <a class="mb-2" href="#"><i class="bi bi-book-half text-dark me-1"></i> Guías</a>
+                                <a class="mb-2" href="#"><i class="bi bi-camera-video text-dark me-1"></i> Escuela de video</a>
+                                <a class="mb-2" href="#"><i class="bi bi-question-circle text-dark me-1"></i> Centro de ayuda</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-4 py-5 ps-4 div-hover-nav2">
+                        <div class="d-flex flex-column justify-content-between h-100">
+                          <div>
+                            <h3 class="fs-4">Conectar</h3>
+                            <div class="d-flex flex-column texto-links-negro py-2">
+                                <a class="mb-2" href="#"><i class="bi bi-people text-dark me-1"></i> Comunidad</a>
+                                <a class="mb-2" href="#"><i class="bi bi-code-slash text-dark me-1"></i> Programadores</a>
+                                <a class="mb-2" href="#"><i class="bi bi-people-fill text-dark me-1"></i> Convertirse en socio</a>
+                                <a class="mb-2" href="#"><i class="bi bi-camera-video text-dark me-1"></i> Contratar a un profesional de video</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-4 py-5 ps-4 div-hover-nav2">
+                        <div class="image-size">
+                          <img src="https://i.vimeocdn.com/custom_asset/d2b064e3e5f8fe7c0490028513ace266?q=80" alt="">
+                        </div>
+                        <h3 class="fs-4 mt-4">Ver demostración</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+      
+              <li class="nav-item mx-1">
+                <a class="nav-link active" href="#">Precio</a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link active" href="#">Ver</a>
+              </li>
+            </ul>
+      
+            <!-- Menú derecha -->
+            <ul class="navbar-nav d-flex align-items-center ms-auto">
+              <li class="nav-item mx-1 d-flex align-items-center">
+                <a class="nav-link active" href="#">Comunicarse con Ventas</a>
+              </li>
+              <li class="nav-item mx-1 d-flex align-items-center">
+                <a class="nav-link active" href="#">Iniciar Sesión</a>
+              </li>
+              <li class="nav-item mx-1 d-flex align-items-center">
+                <button class="btn button-secondary px-3 py-3">
+                  <div class="d-flex align-items-center">
+                    Unirse
+                    <div class="fondo-flecha-nav">
+                      <i class="bi bi-arrow-right flecha flecha-oculta"></i>
+                      <i class="bi bi-arrow-right flecha"></i>
+                    </div>
+                  </div>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Menú Table y movil -->
+      <nav class="navbar navbar-expand-xl d-block d-xl-none bg-transparent fixed-top scrolled">
       <div class="container">
         <!-- Logo -->
-        <div class="mx-2 d-flex justify-content-between align-items-center">
-        <div class="">
-          <a href="#">
-          <img
-            id="logo"
-            src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Vimeo_logo.png"
-            alt=""
-          />
-          </a>
-        </div>
+        <div class="mx-2 d-flex justify-content-between align-items-center w-100">
+          <div class="">
+            <a href="#">
+            <img
+              id="logo"
+              src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Vimeo_logo.png"
+              alt=""
+            />
+            </a>
+          </div>
 
-        <!-- Menú derecha -->
-        <div class="d-flex align-items-center ms-auto d-lg-none">
-          <ul class="navbar-nav d-flex align-items-center">
-          <li class="nav-item mx-1 d-flex align-items-center">
-            <a class="nav-link active" aria-current="page" href="#"
-            >Iniciar Sesion</a
+          <!-- Menú derecha -->
+          <div class="d-flex align-items-center d-xl-none">
+            <ul class="navbar-nav d-flex align-items-center flex-row">
+              <li class="nav-item mx-1 align-items-center">
+                <a class="nav-link active" aria-current="page" href="#">Iniciar Sesion</a>
+              </li>
+              <li class="nav-item mx-1 align-items-center d-block d-md-none">
+                <button class="btn button-secondary px-3 py-3">
+                  <div class="d-flex align-items-center">Unirse</div>
+                </button>
+              </li>
+              <li class="nav-item mx-1 d-flex align-items-center d-none d-md-block">
+                <button class="btn button-secondary px-3 py-3">
+                <div class="d-flex align-items-center">
+                  Unirse
+                  <div class="fondo-flecha-nav">
+                  <i class="bi bi-arrow-right flecha flecha-oculta"></i>
+                  <i class="bi bi-arrow-right flecha"></i>
+                  </div>
+                </div>
+                </button>
+              </li>
+            </ul>
+              <!-- Navbar toggler o Boton menu para movil -->
+              <span
+              class="navbar-toggler-icon d-xl-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
             >
-          </li>
-          <li class="nav-item mx-1 d-flex align-items-center">
-            <button class="btn button-secondary px-3 py-3">
-            <div class="d-flex align-items-center">Unirse</div>
-            </button>
-          </li>
-          </ul>
-        </div>
-
-        <!-- Navbar toggler o Boton menu para movil -->
-        <span
-          class="navbar-toggler-icon d-lg-none"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-        </span>
+            </span>
+          </div>
         </div>
 
         <!-- Menú colapsable -->
@@ -69,58 +324,49 @@
         <!-- Menú izquierda -->
         <div class="d-flex align-items-center">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item mx-1">
-            <a class="nav-link active" aria-current="page" href="#"
-            >Producto<i class="bi bi-chevron-down mx-2"></i
-            ></a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link active" aria-current="page" href="#"
-            >Soluciones<i class="bi bi-chevron-down mx-2"></i
-            ></a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link active" aria-current="page" href="#"
-            >Conocer<i class="bi bi-chevron-down mx-2"></i
-            ></a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link active" aria-current="page" href="#"
-            >Precio</a
-            >
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link active" aria-current="page" href="#"
-            >Ver</a
-            >
-          </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link active fs-4" aria-current="page" href="#"
+              >Producto<i class="bi bi-chevron-down mx-2"></i
+              ></a>
+
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link active fs-4" aria-current="page" href="#"
+              >Soluciones<i class="bi bi-chevron-down mx-2"></i
+              ></a>
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link active fs-4" aria-current="page" href="#"
+              >Conocer<i class="bi bi-chevron-down mx-2"></i
+              ></a>
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link active fs-4" aria-current="page" href="#"
+              >Precio</a
+              >
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link active fs-4" aria-current="page" href="#"
+              >Ver</a
+              >
+            </li>
           </ul>
         </div>
 
         <!-- Menú derecha -->
-        <div class="d-flex align-items-center ms-auto">
-          <ul class="navbar-nav d-flex align-items-center">
-          <li class="nav-item mx-1 d-flex align-items-center">
-            <a class="nav-link active" aria-current="page" href="#"
-            >Comunicarse con Ventas</a
-            >
-          </li>
-          <li class="nav-item mx-1 d-flex align-items-center">
-            <a class="nav-link active" aria-current="page" href="#"
-            >Iniciar Sesion</a
-            >
-          </li>
-          <li class="nav-item mx-1 d-flex align-items-center">
-            <button class="btn button-secondary px-3 py-3">
-            <div class="d-flex align-items-center">
-              Unirse
-              <div class="fondo-flecha-nav">
-              <i class="bi bi-arrow-right flecha flecha-oculta"></i>
-              <i class="bi bi-arrow-right flecha"></i>
+        <div class="d-flex align-items-center ms-auto w-100"></div>
+          <ul class="navbar-nav d-flex align-items-center w-100">
+            <li class="nav-item mx-1 d-flex align-items-center w-100">
+              <button class="btn button-secondary px-3 py-3 w-100">
+              <div class="d-flex align-items-center justify-content-between w-100">
+                Empezar
+                <div class="fondo-flecha-nav">
+                <i class="bi bi-arrow-right flecha flecha-oculta"></i>
+                <i class="bi bi-arrow-right flecha"></i>
+                </div>
               </div>
-            </div>
-            </button>
-          </li>
+              </button>
+            </li>
           </ul>
         </div>
         </div>
@@ -500,7 +746,7 @@
                       <p class="font-size-herramientas my-4">
                         Nuestros análisis avanzados de video en vivo y on-demand lo ayudan a comprender el comportamiento de los espectadores y a hacer los cambios necesarios para lograr mejores resultados en el futuro.
                       </p>
-                      <button class="btn fondo-flecha-primary2 p-2 mt-4">
+                      <button class="btn fondo-flecha-primary2 p-2 mt-3">
                         <div class="d-flex flecha2 flecha-oculta2">
                           <i class="bi-arrow-right fs-5"></i>
                         </div>
@@ -524,7 +770,7 @@
                       <p class="font-size-herramientas my-4">
                         Elija exactamente quién puede ver su video incluso antes de que termine de subirlo. Compártalo solo con determinadas personas, protéjalo con una contraseña u ocúltelo a todo el mundo excepto usted.
                       </p>
-                      <button class="btn fondo-flecha-primary2 p-2 mt-4">
+                      <button class="btn fondo-flecha-primary2 p-2 mt-3">
                         <div class="d-flex flecha2 flecha-oculta2">
                           <i class="bi-arrow-right fs-5"></i>
                         </div>
@@ -537,27 +783,28 @@
                 </div>
                 <!-- Tercera columna -->
                 <div class="col-12 col-lg-4 d-flex my-2">
-                  <div class="bg-white rounded-custom hover-div">
-                    <img
-                      src="https://i.vimeocdn.com/custom_asset/836af6d457bbf113ce959ce34f61697f?w=654&q=80"
-                      alt=""
-                      class="w-100 rounded-custom"
-                    />
-                    <div class="bg-white rounded-custom p-5">
-                      <h3>Análisis</h3>
-                      <p class="font-size-herramientas my-4">
-                        Nuestros análisis avanzados de video en vivo y on-demand lo ayudan a comprender el comportamiento de los espectadores y a hacer los cambios necesarios para lograr mejores resultados en el futuro.
-                      </p>
-                      <button class="btn fondo-flecha-primary2 p-2 mt-4">
-                        <div class="flecha2 flecha-oculta2">
-                          <i class="bi-arrow-right fs-5"></i>
-                        </div>
-                        <div class="flecha2">
-                          <i class="bi bi-arrow-right fs-5"></i>
-                        </div>
-                      </button>
-                    </div>
+                  <div class="bg-white rounded-custom hover-div d-flex flex-column">
+                  <img
+                    src="https://i.vimeocdn.com/custom_asset/0567bb4d6854e1cc8b6754bfa2fc80f7?w=654&q=80"
+                    alt=""
+                    class="w-100 rounded-custom"
+                  />
+                  <div class="bg-white rounded-custom p-5 flex-grow-1">
+                    <h3>Gestión de accesos</h3>
+                    <p class="font-size-herramientas mt-4 mb-5">
+                    Controle el acceso con SSO, agregando dominios a la lista blanca e insertando restricciones, y gestione permisos detallados de usuarios con SCIM.
+                    </p>
+                    <button class="btn fondo-flecha-primary2 p-2 mt-5">
+                      <div class="flecha2 flecha-oculta2">
+                        <i class="bi-arrow-right fs-5"></i>
+                      </div>
+                      <div class="flecha2">
+                        <i class="bi bi-arrow-right fs-5"></i>
+                      </div>
+                    </button>
                   </div>
+                  </div>
+                </div>
                 </div>
               </div>
             </div>
@@ -784,9 +1031,9 @@
         <div class="col-12 col-lg-7">
           <h2 class="text-white">Probar Gratis</h2>
           <div>
-            <div><a href="#" class="text-white">Precio</a></div>
-            <div><a href="#" class="text-white">Comunicarse con Ventas</a></div>
-            <div><a href="#" class="text-white">Ver demostraciones</a></div>
+            <div><a href="#" class="text-white text-decoration-none">Precio</a></div>
+            <div><a href="#" class="text-white text-decoration-none">Comunicarse con Ventas</a></div>
+            <div><a href="#" class="text-white text-decoration-none">Ver demostraciones</a></div>
             <button class="btn button-primary px-4 py-3 mt-3 d-none d-lg-block">
               <div class="d-flex align-items-center">
                 Unirse

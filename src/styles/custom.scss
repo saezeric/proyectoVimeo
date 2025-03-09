@@ -16,8 +16,81 @@ body {
   transition: background-color 0.3s ease;
 }
 
-a {
+.borde-menu-dropdown {
+  border-radius: 20px;
+}
+
+.texto-links-negro a {
+  color: rgb(49, 49, 49);
+}
+
+.texto-links-negro a:hover {
+  transition: color ease 0.4s;
+  color: #17d5fe;
+}
+
+.nav-item.dropdown .dropdown-menu {
+  width: auto; /* Permite que el menú tome el ancho de su contenido */
+  min-width: 1300px; /* Establece un ancho mínimo */
+  max-width: 100%; /* Evita que se expanda demasiado */
+  position: absolute; /* Permite que podamos moverlo libremente */
+  left: 50%; /* Posiciona el inicio del menú en el centro */
+  transform: translateX(
+    -26.5%
+  ); /* Lo mueve hacia la izquierda la mitad de su ancho para centrarlo */
+  z-index: 1000; /* Asegura que el menú se vea por encima de otros elementos */
+  background: white; /* Fondo blanco para que se vea bien */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra para que se vea flotante */
+  padding: 15px; /* Espaciado interno */
+}
+
+/* 🔹 Alinear correctamente el dropdown con respecto al navbar */
+.nav-item.dropdown {
+  position: relative; /* Para evitar que el dropdown esté limitado por el li */
+}
+
+/* 🔹 Permite que el menú desplegable se posicione fuera del <li> */
+.nav-item.dropdown .dropdown-menu {
+  position: absolute;
+  left: 0; /* Mantiene el menú alineado con el enlace "Conocer" */
+  top: 100%; /* Lo coloca justo debajo del enlace */
+  z-index: 1000; /* Asegura que el menú aparezca sobre otros elementos */
+}
+
+/* 🔹 Agregar margen y padding para evitar que el menú esté pegado al borde */
+.borde-menu-dropdown {
+  padding: 15px;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Asegura que el menú esté oculto por defecto */
+.nav-item.dropdown .dropdown-menu {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Muestra el menú cuando el usuario pasa el cursor sobre "Productos" */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.div-hover-nav a {
   text-decoration: none;
+}
+
+.div-hover-nav2 a {
+  text-decoration: none;
+}
+
+.div-hover-nav:hover {
+  background-color: #ecedee;
+  border-radius: 20px;
 }
 
 #logo {
@@ -76,6 +149,7 @@ a {
   background-position: left bottom;
   border-radius: 15px;
   transition: background-position 0.3s ease;
+  background-clip: padding-box;
 }
 
 .button-primary:hover {
@@ -85,11 +159,12 @@ a {
 /* Estilos para el botón con efecto slide */
 .btn.button-secondary {
   position: relative;
-  background: linear-gradient(to right, #dfe4ea 50%, #17d5ff 50%);
+  background: linear-gradient(to right, #d8d8da 50%, #17d5ff 50%);
   background-size: 200% 100%;
   background-position: left bottom;
   border-radius: 15px;
   transition: background-position 0.3s ease;
+  background-clip: padding-box;
 }
 
 .btn.button-secondary:hover {
@@ -395,6 +470,7 @@ h3 {
   background-position: left bottom;
   border-radius: 15px;
   transition: background-position 0.3s ease;
+  background-clip: padding-box;
 }
 
 .button-alternative:hover {
@@ -449,6 +525,7 @@ footer section {
   background-position: left bottom;
   border-radius: 15px;
   transition: background-position 0.3s ease;
+  background-clip: padding-box;
 }
 
 .button-alternative2:hover {
@@ -477,6 +554,7 @@ footer section {
 
 .texto-links a {
   color: white;
+  text-decoration: none;
 }
 
 .texto-links a:hover {
