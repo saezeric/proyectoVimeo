@@ -183,8 +183,8 @@ body {
   background-color: #17d5ff;
   border-radius: 7px;
   margin-left: 10px;
-  overflow: hidden; // Oculta lo que sobresalga
-  display: inline-flex; // Alinea los iconos en fila
+  overflow: hidden;
+  display: inline-flex;
   align-items: center;
   transition: background-color 0.5s ease;
 }
